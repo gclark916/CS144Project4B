@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Search | eBay</title>
+    <link rel="stylesheet" type="text/css" href="./eBay.css">
+    <script type="text/javascript" src="/eBay/AutoSuggest.js"></script>
+    <script type="text/javascript">
+    var autoSuggest;
+    
+    function initialize ()
+    {
+        autoSuggest = new AutoSuggestControl(document.getElementById("searchBox"));
+    }
+    </script>
+</head>
+<body onload="initialize()">
+<form action="./search" method="GET" autocomplete="off">
+<input id="searchBox" type="text" name="q" autocomplete="off">
+<input type="hidden" name="numResultsToSkip" value="0">
+<input type="hidden" name="numResultsToReturn" value="10">
+<input type="submit" value="Search">
+</form>
+</body>
+</html>
